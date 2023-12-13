@@ -1,0 +1,410 @@
+
+
+
+
+
+Especificação Funcional
+
+Versão 1.0
+
+
+
+
+Responsáveis:
+
+Gabriel Moura– g.moura@estudante.iftm.edu.br
+
+Vinícius Pires Teixeira – vinicius.teixeira@estudante.iftm.edu.br
+
+João Pedro Dias Florêncio – joao.florencio@estudante.iftm.edu.br
+
+Cliente:
+
+< indivíduo que está inscrito em um plano de saúde >
+
+Att.: Vinícius Pires Teixeira
+
+Setor: Saúde   Área: Biomedicina
+
+
+Projeto:
+
+nome do projeto: Aplicativo de Delivery
+
+
+1. Escopo do Projeto  
+
+Irá criar planos de saúdes que serão mantidos em um servidor capaz de armazenar todos os planos de todos os pacientes em uma forma de manter os arquivos guardados em um só lugar, permitindo ver todo o tipo de dados e vai haver opções de filtro com o intuito de uma pesquisa mais restrita, como por exemplo: vasculhar históricos do passado. 
+
+O plano de saúde tem o intuito de beneficiar os pacientes com preços mais acessíveis e melhor acessibilidade à atendimento. Com esse objetivo, criaremos um arquivo capaz de armazenar sua conta juntamente com o plano de saúde, onde você poderá agendar consulta e analisar preços, tudo isso sem sair de casa!
+
+1.1. Objetivos deste documento 
+
+Descrever e especificar as necessidades de um Plano de saúde que devem ser atendidas pelo produto SOS, bem como definir para os desenvolvedores o produto a ser feito.
+
+
+1.2. Nome do Produto
+
+SOS (Sistema Ótimo da Saúde).
+
+
+1.3. Objetivo do Produto
+
+	O sistema tem o intuito suprir as necessidades das pessoas por atendimento médico, hospitalar e laboratorial , de modo que os dados possam ser registrados e gerenciados.
+
+	Com esse sistema, os agentes da saúde poderão acessar as suas consultas, receitar seus pacientes, diagnosticar ou internar, se preciso. Os próprios clientes poderão  agendar as suas consultas ou tirar dúvidas de forma virtual ou presencial com seus médicos responsáveis.
+
+	Além disso, as receitas e atestados poderão ser gerados automaticamente, o que agilizará muito o acompanhamento da saúde do cliente.
+
+
+1.4. Escopo negativo
+
+<Lista com funcionalidades relacionadas ao escopo do projeto (objetivo do produto) que não serão implementadas nesta versão>
+
+Exemplo:
+
+Limites
+
+O paciente não será capaz de olhar os dados restantes dos outros pacientes tornando algo mais privado e individual.
+
+O usuário poderá efetuar o pagamento do plano de saúde pelo app(futura versão)
+
+Não será possível mudar as configurações do plano pelo app.
+
+Combos promocionais(combo família, etc…) serão adicionados(futura versão).
+
+
+1.5. Lista de Atores
+
+<Lista com os possíveis atores que irão interagir com o sistema a ser desenvolvido, suas responsabilidades e desejos>
+
+Exemplo:
+
+
+Ator
+
+Responsabilidade
+
+Plano de saúde
+
+Cobre consultas, exames, tratamentos e transportes de ambulância em caso de emergências
+
+Médico
+
+Deve informar o paciente: qual a doença do paciente, regras a seguir, possíveis riscos, cuidados com seu tratamento e aconselhar o paciente e sua família  
+
+Paciente
+
+Poderá ver a data e hora da consulta, os dados de seu médico, os exames que faltam
+
+
+1.6. Requisitos do Projeto
+
+1.6.1. Funcionalidades
+
+<Listagem das principais funcionalidades do projeto. Requisitos funcionais primários/macro>
+
+Exemplo:
+
+
+ID
+
+Descrição do requisito funcional
+
+Prioridade
+
+RF01
+
+Permitir o gerenciamento dos pacientes
+
+Alta
+
+RF02
+
+Permitir o gerenciamento de médicos
+
+Alta
+
+RF03
+
+Permitir o gerenciamento das consultas
+
+Alta
+
+RF04
+
+Permitir o lançamento dos atestados
+
+Alta
+
+RF05
+
+Permitir o gerenciamento dos exames
+
+Alta
+
+RF06
+
+Permitir transporte de ambulância
+
+Média
+
+RF07
+
+Gerar relatórios das receitas e atestados
+
+Alta
+
+RF08
+
+permitir agendamento das consultas
+
+Alta
+
+RF09
+
+Fazer login com a conta do plano
+
+Alta
+
+
+1.6.2. Mapa de Rastreabilidade
+
+
+
+RF01
+
+RF02
+
+RF03
+
+RF04
+
+RF05
+
+RF06
+
+RF07
+
+RF08
+
+RF09
+
+RF01
+
+
+X
+
+
+
+
+
+
+
+X
+
+RF02
+
+
+
+
+
+
+
+
+
+X
+
+RF03
+
+
+X
+
+
+
+
+
+
+
+X
+
+RF04
+
+
+X
+
+
+
+
+
+
+
+X
+
+RF05
+
+
+X
+
+
+
+
+
+
+
+X
+
+RF06
+
+
+X
+
+
+
+
+
+
+
+X
+
+RF07
+
+
+X
+
+
+
+
+
+
+
+X
+
+RF08
+
+
+X
+
+
+
+
+
+
+
+X
+
+RF09
+
+
+
+
+
+
+
+
+
+
+
+1.6.3. Requisitos de Qualidade (Não Funcionais)
+
+<Restrições relacionados à qualidade do software a ser desenvolvido. Pode ser classificado em diversas categorias: Funcionalidade, Confiabilidade, Usabilidade, Eficiência, Manutenibilidade, Portabilidade, Segurança e Compatibilidade> Exemplo:
+
+ID
+
+Categoria(s)
+
+Descrição
+
+RNF01
+
+Compatibilidade
+
+O sistema deve ser compatível com os navegadores Chrome, Safari, Edge e Firefox.
+
+RNF02
+
+Manutenibilidade
+
+A camada de acesso a dados deverá ser projetada com interfaces de acordo com o padrão de projeto DAO. 
+
+RNF03
+
+Funcionalidade
+
+Cada ator que interage com o sistema deve corresponder a um perfil de usuário. Cada ator deve ter permissão de acesso somente aos casos de uso com os quais interage. 
+
+RNF04
+
+Eficiência
+
+O sistema deve efetuar o processamento de lançamento das receitas e atestados dos clientes automaticamente.
+
+RNF05
+
+Compatibilidade, Manutenibilidade
+
+O sistema deve ser desenvolvido usando React no front-end e Java no back-end.
+
+RNF06
+
+Manutenibilidade
+
+O sistema precisa estar disponível 24 horas por dia, exceto quando houver manutenções e atualizações onde o tempo de indisponibilidade não pode ultrapassar 5 minutos e deve ocorrer durante a madrugada.
+
+
+2. Requisitos Funcionais
+
+2.1.  Diagrama de Casos de Uso
+
+
+2.1.1.   Aplicativo de Delivery
+
+Detalhamento dos casos de uso:
+
+Cliente:O cliente é capaz
+
+ Propósito: <Descrição da funcionalidade principal do caso de uso.>
+
+Um aplicativo de entrega de comida permite que o cliente realize pedidos e receba a comida no conforto do seu lar.
+
+Pré-Condições: <Condições que devem ser atendidas para a execução bem sucedida do caso de uso.> 
+
+Caso de uso: Validar cadastro
+
+Ator primário: Administrador
+
+Descrição: O administrador valida o cadastro de um entregador após analisar os dados fornecidos.
+
+Pré-condições: O administrador recebe uma solicitação de cadastro de um entregador.
+
+Informações Complementares: <Descrição de requisitos não funcionais específicos desse caso de uso, regras de dados e demais informações importantes> 
+
+
+Fluxo Principal: <Descrição passo a passo das ações do(s) ator(es) e quais as respostas que o sistema deve tomar mediante às interações com o ator(es).>
+
+
+Fluxos Alternativos: <Descrição de cada caso em que o usuário pode tomar um fluxo alternativo diferente do cenário de sucesso principal, incluindo exceções que possam ocorrer. > 
+
+ 
+
+Regras (Negócio):
+
+Regra
+
+Descrição
+
+<id>
+
+<Descrição detalhada das regras de negócio envolvidas no caso de uso. Podem ser referenciadas no detalhamento dos fluxos através do identificado.>
+
+RN01
+
+
+
+
+3. Diagrama de Classes
+
+
+Figura 2 – Diagrama de Classes
+
+
